@@ -1,0 +1,18 @@
+server:
+  port: 9501
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9500/eureka/
+  instance:
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
+spring:
+  profiles:
+    active: native
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/prod/config/
