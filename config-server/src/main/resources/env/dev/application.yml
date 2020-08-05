@@ -9,11 +9,11 @@ eureka:
 
 spring:
   profiles:
-    active: native
+    active: native #配置中心加载方式
   application:
     name: config-server
   cloud:
     config:
       server:
         native:
-          search-locations: classpath:/dev/config/
+          search-locations: classpath:/dev/config/ #本地加载配置文件地址

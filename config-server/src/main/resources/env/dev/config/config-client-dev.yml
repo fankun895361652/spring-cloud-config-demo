@@ -17,4 +17,4 @@ eureka:
   instance:
     instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
 
-nickName: world + dev
+nickName: world + 666
